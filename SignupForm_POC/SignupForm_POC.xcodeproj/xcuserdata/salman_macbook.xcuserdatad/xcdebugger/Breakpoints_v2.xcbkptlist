@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4A71DD71-DFED-4DE7-8B91-6BC8E725B049"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5296D60-513D-4440-A43B-55148E8C312C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HttpClient/SignupHttpClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "signupHttpRequest(_:user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5296D60-513D-4440-A43B-55148E8C312C - 41650f473de6fc46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SignupForm_POC.SignupHttpClient.signupHttpRequest(Swift.String) async throws -&gt; Swift.Optional&lt;SignupForm_POC.User&gt;"
+                  moduleName = "SignupForm_POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/Interview_Prep/SwiftUI/SignupForm_POC/HttpClient/SignupHttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "F5296D60-513D-4440-A43B-55148E8C312C - b101517c3ac3f34f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for SignupForm_POC.SignupHttpClient.signupHttpRequest(Swift.String) async throws -&gt; Swift.Optional&lt;SignupForm_POC.User&gt;"
+                  moduleName = "SignupForm_POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/Interview_Prep/SwiftUI/SignupForm_POC/HttpClient/SignupHttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "F5296D60-513D-4440-A43B-55148E8C312C - 48ffd42d7bfb044"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SignupForm_POC.SignupHttpClient.signupHttpRequest(Swift.String) async throws -&gt; Swift.Optional&lt;SignupForm_POC.User&gt;"
+                  moduleName = "SignupForm_POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/Interview_Prep/SwiftUI/SignupForm_POC/HttpClient/SignupHttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "F5296D60-513D-4440-A43B-55148E8C312C - a61ac44c22a8d645"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for SignupForm_POC.SignupHttpClient.signupHttpRequest(Swift.String) async throws -&gt; Swift.Optional&lt;SignupForm_POC.User&gt;"
+                  moduleName = "SignupForm_POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/Interview_Prep/SwiftUI/SignupForm_POC/HttpClient/SignupHttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "F5296D60-513D-4440-A43B-55148E8C312C - 35564c535a2a1a4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SignupForm_POC.SignupHttpClient.signupHttpRequest(_: Swift.String, user: Swift.Optional&lt;SignupForm_POC.User&gt;) async throws -&gt; Swift.Optional&lt;SignupForm_POC.User&gt;"
+                  moduleName = "SignupForm_POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/Interview_Prep/SwiftUI/SignupForm_POC/HttpClient/SignupHttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5A5D368-4FFE-4CF1-997B-DA425B82B132"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HttpClient/SignupHttpClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "signupHttpRequest(_:user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5A5D368-4FFE-4CF1-997B-DA425B82B132 - 48ffd42d7bfb15d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SignupForm_POC.SignupHttpClient.signupHttpRequest(Swift.String) async throws -&gt; Swift.Optional&lt;SignupForm_POC.User&gt;"
+                  moduleName = "SignupForm_POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/Interview_Prep/SwiftUI/SignupForm_POC/HttpClient/SignupHttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "728">
+               </Location>
+               <Location
+                  uuid = "B5A5D368-4FFE-4CF1-997B-DA425B82B132 - 4fa902aab288db31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SignupForm_POC.SignupHttpClient.signupHttpRequest(_: Swift.String, user: Swift.Optional&lt;SignupForm_POC.User&gt;) async throws -&gt; Swift.Optional&lt;SignupForm_POC.User&gt;"
+                  moduleName = "SignupForm_POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/Interview_Prep/SwiftUI/SignupForm_POC/HttpClient/SignupHttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "764">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
