@@ -1,0 +1,83 @@
+[
+    {
+        "id": 101,
+        "name": "Starbucks A TATA Venture",
+        "distance": 10,
+        "coordinates": {
+            "longitude": 77.367783,
+            "latitude": 28.628151
+        }
+    },
+    {
+        "id": 102,
+        "name": "Starbucks CityCentre",
+        "distance": 18,
+        "coordinates": {
+            "longitude": 77.35561,
+            "latitude": 28.57447
+        }
+    },
+    {
+        "id": 103,
+        "name": "Starbucks Coffee, Gaur City 1",
+        "distance": 5,
+        "coordinates": {
+            "longitude": 77.4296,
+            "latitude": 28.6060
+        }
+    },
+    {
+        "id": 104,
+        "name": "Starbucks Sector52",
+        "distance": 8,
+        "coordinates": {
+            "longitude": 77.3728,
+            "latitude": 28.5867
+        },
+    },
+    {
+        "id": 105,
+        "name": "Starbucks Sector18",
+        "distance": 15,
+        "coordinates": {
+            "longitude": 77.3218,
+            "latitude": 28.5703
+        },
+    },
+    {
+        "id": 106,
+        "name": "Plaza Hollywood",
+        "distance": 25,
+        "coordinates": {
+            "longitude": 114.20169067382812,
+            "latitude": 22.340700149536133,
+        },
+    },
+    {
+        "id": 107,
+        "name": "Exchange Square",
+        "distance": 30,
+        "coordinates": {
+            "longitude": 114.15818786621094,
+            "latitude": 22.283939361572266,
+        },
+    },
+    {
+        "id": 108,
+        "name": "Telford Plaza",
+        "distance": 40,
+        "coordinates": {
+            "longitude": 114.21343994140625,
+            "latitude": 22.3228702545166,
+        }
+    },
+    {
+        "id": 109,
+        "name": "Hong Kong Station",
+        "distance": 50,
+        "coordinates": {
+            "longitude": 114.15846252441406,
+            "latitude": 22.28445053100586,
+        },
+    },
+]
