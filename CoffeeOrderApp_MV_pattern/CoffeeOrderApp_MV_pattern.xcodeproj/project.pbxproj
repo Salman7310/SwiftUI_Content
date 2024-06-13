@@ -20,6 +20,7 @@
 		321E4A3F2C19DC8F003B6CC2 /* CoffeeOrderAppE2ETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E4A3E2C19DC8F003B6CC2 /* CoffeeOrderAppE2ETests.swift */; };
 		321E4A482C19E2A5003B6CC2 /* AddCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E4A472C19E2A5003B6CC2 /* AddCoffeeView.swift */; };
 		321E4A4A2C19E44B003B6CC2 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E4A492C19E44B003B6CC2 /* View+Extensions.swift */; };
+		3221A8FB2C1AC4A000EB4A41 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3221A8FA2C1AC4A000EB4A41 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		321E4A3E2C19DC8F003B6CC2 /* CoffeeOrderAppE2ETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrderAppE2ETests.swift; sourceTree = "<group>"; };
 		321E4A472C19E2A5003B6CC2 /* AddCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeView.swift; sourceTree = "<group>"; };
 		321E4A492C19E44B003B6CC2 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		3221A8FA2C1AC4A000EB4A41 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +115,8 @@
 		321E4A272C19B1E9003B6CC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				321E4A282C19B1E9003B6CC2 /* CoffeeModel.swift */,
 				321E4A292C19B1E9003B6CC2 /* Order.swift */,
+				321E4A282C19B1E9003B6CC2 /* CoffeeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +135,7 @@
 			children = (
 				321E4A2D2C19B1E9003B6CC2 /* NumberFormatter+Extensions.swift */,
 				321E4A492C19E44B003B6CC2 /* View+Extensions.swift */,
+				3221A8FA2C1AC4A000EB4A41 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				320635492C187D3B000AAA4D /* ContentView.swift in Sources */,
+				3221A8FB2C1AC4A000EB4A41 /* String+Extensions.swift in Sources */,
 				320635472C187D3B000AAA4D /* CoffeeOrderApp_MV_patternApp.swift in Sources */,
 				321E4A342C19B1E9003B6CC2 /* WebService.swift in Sources */,
 				321E4A332C19B1E9003B6CC2 /* NumberFormatter+Extensions.swift in Sources */,
