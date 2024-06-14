@@ -3,4 +3,556 @@
    uuid = "D78F4CFF-15D8-4731-B9D5-C2F38E71B285"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "737903E8-DAAC-4100-B049-6E6FF295DC12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "updateOrder(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "737903E8-DAAC-4100-B049-6E6FF295DC12 - 9e55d309e0a3343b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.updateOrder(CoffeeOrderApp_MV_pattern.Order) async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "737903E8-DAAC-4100-B049-6E6FF295DC12 - 2b51f3696546ef8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.updateOrder(CoffeeOrderApp_MV_pattern.Order) async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "737903E8-DAAC-4100-B049-6E6FF295DC12 - 2f92f28660467635"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.updateOrder(CoffeeOrderApp_MV_pattern.Order) async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "737903E8-DAAC-4100-B049-6E6FF295DC12 - 684d6245aff71936"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.updateOrder(CoffeeOrderApp_MV_pattern.Order) async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "saveUpdateOrder()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664 - d376774be8f0d3b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.placeOrder() async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664 - c4aa4f41f15ceab4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.saveUpdateOrder() async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1492">
+               </Location>
+               <Location
+                  uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664 - 42f01e68c849325c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.saveUpdateOrder() async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664 - 7c7fd6e9af33ee7c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.saveUpdateOrder() async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664 - 7c7fd6e9af33eeb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.saveUpdateOrder() async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664 - c4aa4f41f15ceab4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.saveUpdateOrder() async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1692">
+               </Location>
+               <Location
+                  uuid = "F18A8CA0-DA84-4960-B4E6-C5D9422FE664 - 7c7fd6e9af33eeb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.AddCoffeeView.saveUpdateOrder() async -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Views/AddCoffeeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "773B9618-E059-4FF4-ADE9-1AD3FCD0873A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "updateOrder(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "773B9618-E059-4FF4-ADE9-1AD3FCD0873A - fc55fc6810e42bf5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "773B9618-E059-4FF4-ADE9-1AD3FCD0873A - fc55fc6810e42bf5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8A542CC-D72D-4CC5-8C5E-B711775F214A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "updateOrder(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F8A542CC-D72D-4CC5-8C5E-B711775F214A - fc55fc6810e42942"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "912">
+               </Location>
+               <Location
+                  uuid = "F8A542CC-D72D-4CC5-8C5E-B711775F214A - 4cb8992444c7b808"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "F8A542CC-D72D-4CC5-8C5E-B711775F214A - b212bb007806e940"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "F8A542CC-D72D-4CC5-8C5E-B711775F214A - d4f21894ac56094f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1616238E-4068-4E75-AB13-060835D6B2E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "updateOrder(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73CD9321-F4E7-4F1B-928F-B44B39BE0A24"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "updateOrder(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA153FA0-CBF2-4449-A473-23EC0E5B7DAD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Models/CoffeeModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "update(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DA153FA0-CBF2-4449-A473-23EC0E5B7DAD - e6cbeaa792a36c12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.CoffeeModel.deleteOrder(Swift.Int) async throws -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Models/CoffeeModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "DA153FA0-CBF2-4449-A473-23EC0E5B7DAD - ec032eb5d0f8b49b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CoffeeOrderApp_MV_pattern.Order) -&gt; Swift.Bool in CoffeeOrderApp_MV_pattern.CoffeeModel.deleteOrder(Swift.Int) async throws -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Models/CoffeeModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "DA153FA0-CBF2-4449-A473-23EC0E5B7DAD - 654103304a73fb9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.CoffeeModel.update(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Models/CoffeeModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "504">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53D5AC08-F0E0-4745-8F06-15AFC2401EF3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "updateOrder(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53D5AC08-F0E0-4745-8F06-15AFC2401EF3 - b212bb007806e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "53D5AC08-F0E0-4745-8F06-15AFC2401EF3 - b212bb007806e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.WebService.updateOrder(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; CoffeeOrderApp_MV_pattern.Order"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BB56A6C-3518-4C2E-8FC3-92B5CF5FD758"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Services/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "updateOrder(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41DFD3A1-42C9-42A2-83FF-001D49F91E37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Models/CoffeeModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "update(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "41DFD3A1-42C9-42A2-83FF-001D49F91E37 - 654103304a73fa27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CoffeeOrderApp_MV_pattern.CoffeeModel.update(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Models/CoffeeModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "41DFD3A1-42C9-42A2-83FF-001D49F91E37 - 5be3d3801807a156"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CoffeeOrderApp_MV_pattern.Order) -&gt; Swift.Bool in CoffeeOrderApp_MV_pattern.CoffeeModel.update(CoffeeOrderApp_MV_pattern.Order) async throws -&gt; ()"
+                  moduleName = "CoffeeOrderApp_MV_pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI_Cource/SwiftUI_Content/CoffeeOrderApp_MV_pattern/CoffeeOrderApp_MV_pattern/Models/CoffeeModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C74877A-1F43-49E6-8562-B08E31CC1BB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeOrderApp_MV_pattern/Views/OrderDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
