@@ -22,6 +22,7 @@
 		321E4A4A2C19E44B003B6CC2 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E4A492C19E44B003B6CC2 /* View+Extensions.swift */; };
 		3221A8FB2C1AC4A000EB4A41 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3221A8FA2C1AC4A000EB4A41 /* String+Extensions.swift */; };
 		323959E82C1C1C1100251A48 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323959E72C1C1C1100251A48 /* OrderDetailView.swift */; };
+		323959EA2C1D756800251A48 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323959E92C1D756800251A48 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		321E4A492C19E44B003B6CC2 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3221A8FA2C1AC4A000EB4A41 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		323959E72C1C1C1100251A48 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		323959E92C1D756800251A48 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		323959EB2C1D7A8D00251A48 /* CoffeeOrderApp-MV-pattern-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CoffeeOrderApp-MV-pattern-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 		320635452C187D3B000AAA4D /* CoffeeOrderApp_MV_pattern */ = {
 			isa = PBXGroup;
 			children = (
+				323959EB2C1D7A8D00251A48 /* CoffeeOrderApp-MV-pattern-Info.plist */,
 				321E4A352C19CD06003B6CC2 /* Utils */,
 				321E4A2C2C19B1E9003B6CC2 /* Extensions */,
 				321E4A2E2C19B1E9003B6CC2 /* Services */,
@@ -129,6 +133,7 @@
 				321E4A2B2C19B1E9003B6CC2 /* OrderCellView.swift */,
 				321E4A472C19E2A5003B6CC2 /* AddCoffeeView.swift */,
 				323959E72C1C1C1100251A48 /* OrderDetailView.swift */,
+				323959E92C1D756800251A48 /* SplashView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				321E4A332C19B1E9003B6CC2 /* NumberFormatter+Extensions.swift in Sources */,
 				321E4A482C19E2A5003B6CC2 /* AddCoffeeView.swift in Sources */,
 				321E4A322C19B1E9003B6CC2 /* OrderCellView.swift in Sources */,
+				323959EA2C1D756800251A48 /* SplashView.swift in Sources */,
 				321E4A372C19CD19003B6CC2 /* AppEnvironment.swift in Sources */,
 				321E4A312C19B1E9003B6CC2 /* Order.swift in Sources */,
 				321E4A4A2C19E44B003B6CC2 /* View+Extensions.swift in Sources */,
@@ -431,9 +437,9 @@
 				DEVELOPMENT_TEAM = 9GQZQAD6HM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CoffeeOrderApp-MV-pattern-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,9 +466,9 @@
 				DEVELOPMENT_TEAM = 9GQZQAD6HM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CoffeeOrderApp-MV-pattern-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

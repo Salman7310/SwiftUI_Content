@@ -12,6 +12,7 @@ struct OrderDetailView: View {
     @EnvironmentObject private var model: CoffeeModel
     @State private var isPresented: Bool = false
     @Environment(\.dismiss) private var dismiss
+    @State private var isLoading: Bool = false
     
     let orderId: Int
     
@@ -39,11 +40,18 @@ struct OrderDetailView: View {
                     
                     HStack {
                         Spacer()
-                        Button("Delete Order", role: .destructive) {
-                            Task {
-                                await deleteOrder()
+                        if isLoading {
+                            ProgressView()
+                        } else {
+                            Button("Delete Order", role: .destructive) {
+                                isLoading = true
+                                Task {
+                                    await deleteOrder()
+                                    isLoading = false
+                                }
                             }
                         }
+                        
                         Button("Edit Order") {
                             isPresented = true
                         }.accessibilityIdentifier("editOrderButton")

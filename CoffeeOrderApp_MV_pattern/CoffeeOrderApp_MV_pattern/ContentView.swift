@@ -11,10 +11,13 @@ struct ContentView: View {
     
     @State private var isPresented: Bool = false
     @EnvironmentObject private var model: CoffeeModel
+    @State private var isLoading: Bool = false
     
     private func populateOrders() async {
+        isLoading = true
         do {
             try await model.populateOrders()
+            isLoading = false
         } catch {
             print(error)
         }
@@ -22,6 +25,12 @@ struct ContentView: View {
     
     private func deleteOrder(_ indexSet: IndexSet) {
         indexSet.forEach { index in
+            isLoading = true
+            
+            if isLoading {
+                ProgressView()
+            }
+            
             let order = model.orders[index]
             guard let orderId = order.id else {
                 return
@@ -30,8 +39,10 @@ struct ContentView: View {
             Task {
                 do {
                     try await model.deleteOrder(orderId)
+                    isLoading = false
                 } catch {
                     print(error)
+                    isLoading = false
                 }
             }
         }
@@ -40,17 +51,21 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                if model.orders.isEmpty {
-                    Text("No orders available!").accessibilityIdentifier("noOrdersText")
+                if isLoading {
+                    ProgressView()
                 } else {
-                    List {
-                        ForEach(model.orders) { order in
-                            NavigationLink(value: order.id) {
-                                OrderCellView(order: order)
-                            }
-                        }.onDelete(perform: deleteOrder)
+                    if model.orders.isEmpty {
+                        Text("No orders available!").accessibilityIdentifier("noOrdersText")
+                    } else {
+                        List {
+                            ForEach(model.orders) { order in
+                                NavigationLink(value: order.id) {
+                                    OrderCellView(order: order)
+                                }
+                            }.onDelete(perform: deleteOrder)
+                        }
+                        .accessibilityIdentifier("orderList")
                     }
-                    .accessibilityIdentifier("orderList")
                 }
             }
             .navigationDestination(for: Int.self, destination: { orderId in

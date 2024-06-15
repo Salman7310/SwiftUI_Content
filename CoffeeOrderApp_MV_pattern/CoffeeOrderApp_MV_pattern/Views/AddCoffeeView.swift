@@ -21,6 +21,8 @@ struct AddCoffeeView: View {
     @State private var coffeeSize: CoffeeSize = .medium
     @State private var errors: AddCoffeeErrors = AddCoffeeErrors()
     
+    @State private var isLoading: Bool = false
+    
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var model: CoffeeModel
     
@@ -119,15 +121,21 @@ struct AddCoffeeView: View {
                     }
                 }.pickerStyle(.segmented)
                 
-                Button(order == nil ? "Place order" : "Update Order") {
-                    if isValid {
-                        // place the order
-                        Task {
-                            await saveUpdateOrder()
+                if isLoading {
+                    ProgressView()
+                } else {
+                    Button(order == nil ? "Place order" : "Update Order") {
+                        if isValid {
+                            isLoading = true
+                            // place the order
+                            Task {
+                                await saveUpdateOrder()
+                                isLoading = false
+                            }
                         }
-                    }
-                }.accessibilityIdentifier("placeOrderButton")
-                    .centerHorizontally()
+                    }.accessibilityIdentifier("placeOrderButton")
+                        .centerHorizontally()
+                }
             }
             .navigationTitle(order == nil ? "Add Order" : "Update Order")
             .onAppear {
