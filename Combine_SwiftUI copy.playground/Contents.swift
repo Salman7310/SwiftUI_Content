@@ -43,8 +43,7 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
     print("Subscription Cancelled")
 }*/
 
-
-// Error Handeling in Combine
+//===============================Error Handeling in Combine==============================
 
 /*enum NumberError: Error {
     case operationFailed
@@ -106,7 +105,8 @@ let cancellable = doublePublisher.sink { completion in
     print(value)
 }*/
 
-// Combine Framework - Operators
+//=============================================Combine Framework - Operators=====================
+
 // Transformation Operators (map, flatMap, merge etc).
 
 let numberPublisher1 = (1...5).publisher
@@ -138,3 +138,39 @@ let mergedPublisher = Publishers.Merge(publisher1, publisher2)
 mergedPublisher.sink { value in
     print(value)
 }
+
+//===============================Filtering Operators(filter, compactMap, debounce etc)====================
+
+// filter
+let numberPublisher = (1...10).publisher
+let evenNumPublisher = numberPublisher.filter { $0 % 2 == 0}
+
+// Now Subscribe the Publisher
+let cancellable = evenNumPublisher.sink { value in
+    print(value)
+}
+
+// compactMap -> It will ignore the nil value and handle optionals
+let stringPublisher = ["1","2","3","4","5","A","B"].publisher
+let numPublisher = stringPublisher.compactMap { Int($0) }
+
+// Now Subscribe the Publisher
+let cancellables = numPublisher.sink { value in
+    print(value)
+}
+
+// debounce
+let textPublisher = PassthroughSubject<String, Never>() // Never means it will never fail or throw error
+let debouncePublisher = textPublisher.debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+
+let cancellable1 = debouncePublisher.sink { value in
+    print(value)
+}
+
+textPublisher.send("A")
+textPublisher.send("B")
+textPublisher.send("C")
+textPublisher.send("D")
+textPublisher.send("E")
+textPublisher.send("F")
+textPublisher.send("G")
