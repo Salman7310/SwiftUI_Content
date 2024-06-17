@@ -29,3 +29,16 @@ let timerPublisher = Timer.publish(every: 1, on: .main, in: .common)
 let cancelable = timerPublisher.autoconnect().sink { timestamp in
     print("Timestamp:- \(timestamp)")
 }
+
+
+// Number Publisher.
+let numberPublishers = (1...10).publisher
+let cancellables = numberPublishers.sink { value in
+    print(value)
+}
+
+// Manually cancel the subscription
+DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+    cancellables.cancel()
+    print("Subscription Cancelled")
+}
