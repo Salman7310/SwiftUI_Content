@@ -46,11 +46,11 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
 
 // Error Handeling in Combine
 
-enum NumberError: Error {
+/*enum NumberError: Error {
     case operationFailed
 }
 
-/*let numberPublisher = [1,2,3,4,5,6].publisher
+let numberPublisher = [1,2,3,4,5,6].publisher
 
 let doublePublisher = numberPublisher.tryMap { number in
     if number == 4 {
@@ -77,7 +77,7 @@ let cancellable = doublePublisher.sink { completion in
     }
 } receiveValue: { value in
     print(value)
-}*/
+}
 
 
 // Handle same error by using mapError
@@ -104,5 +104,37 @@ let cancellable = doublePublisher.sink { completion in
     }
 } receiveValue: { value in
     print(value)
+}*/
+
+// Combine Framework - Operators
+// Transformation Operators (map, flatMap, merge etc).
+
+let numberPublisher1 = (1...5).publisher
+let squaredNumber = numberPublisher1.map { $0 * $0 }
+
+// Now Subscribe the Publisher
+squaredNumber.sink { value in
+    print(value)
+}
+ 
+// flatMap
+
+let namePublisher = ["John", "Mary", "Steven"].publisher
+let flattedName = namePublisher.flatMap { name in
+    name.publisher
 }
 
+// Now Subscribe the Publisher
+flattedName.sink { char in
+    print(char)
+}
+
+// Merge
+let publisher1 = [1,2,3].publisher
+let publisher2 = [4,5,6].publisher
+let publisher3 = ["A", "B"].publisher
+
+let mergedPublisher = Publishers.Merge(publisher1, publisher2)
+mergedPublisher.sink { value in
+    print(value)
+}
