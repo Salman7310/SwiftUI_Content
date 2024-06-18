@@ -109,7 +109,7 @@ let cancellable = doublePublisher.sink { completion in
 
 // Transformation Operators (map, flatMap, merge etc).
 
-let numberPublisher1 = (1...5).publisher
+/*let numberPublisher1 = (1...5).publisher
 let squaredNumber = numberPublisher1.map { $0 * $0 }
 
 // Now Subscribe the Publisher
@@ -173,4 +173,73 @@ textPublisher.send("C")
 textPublisher.send("D")
 textPublisher.send("E")
 textPublisher.send("F")
-textPublisher.send("G")
+textPublisher.send("G")*/
+
+
+//=======================Combining Operators(combineLatest, zip, switchToLatest)=========================================
+
+//combineLatest
+/*let publisher11 = CurrentValueSubject<Int, Never>(1)
+let publisher22 = CurrentValueSubject<Int, Never>(2)
+
+let combinePublisher = publisher11.combineLatest(publisher22)
+
+combinePublisher.sink { value1, value2 in
+    print("Value 1 is: \(value1) and Value 2 is: \(value2)")
+}
+
+publisher11.send(3)
+publisher22.send(4)
+
+let intPublishers = CurrentValueSubject<Int, Never>(1)
+let stringPublisher = CurrentValueSubject<String, Never>("Hello")
+
+let combinedPublisher = intPublishers.combineLatest(stringPublisher)
+
+let cancellable = combinedPublisher.sink { value1, value2 in
+    print("Value 1 is: \(value1) and Value 2 is: \(value2)")
+}
+
+intPublishers.send(3)
+stringPublisher.send("World")
+
+// zip
+let zipPublisher1 = [1,2,3].publisher
+let zipPublisher2 = ["A", "B", "C"].publisher
+
+let zippedPublisher = zipPublisher1.zip(zipPublisher2)
+
+let cancellable = zippedPublisher.sink { value1, value2 in
+    print("Value1: \(value1) and Value2: \(value2)")
+}
+
+// If combining more than 2 publisher.
+let zipPublisher11 = [1,2,3].publisher
+let zipPublisher22 = ["A", "B", "C"].publisher
+let zipPublisher33 = ["John", "Marry", "Steve"].publisher
+
+let zippedPub = Publishers.Zip3(zipPublisher11, zipPublisher22, zipPublisher33)
+
+let cancellable = zippedPub.sink { values in
+    print("\(values.0) \(values.1) \(values.2)")
+}*/
+
+
+// switchToLatest
+let outerPublisher = PassthroughSubject<AnyPublisher<Int, Never>, Never>()
+let innerPublisher1 = CurrentValueSubject<Int, Never>(1)
+let innerPublisher2 = CurrentValueSubject<Int, Never>(2)
+
+let cancellable = outerPublisher
+    .switchToLatest()
+    .sink { value in
+        print(value)
+    }
+
+outerPublisher.send(AnyPublisher(innerPublisher1))
+innerPublisher1.send(10)
+
+outerPublisher.send(AnyPublisher(innerPublisher2))
+innerPublisher2.send(20)
+
+innerPublisher2.send(100)
