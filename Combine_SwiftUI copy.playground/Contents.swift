@@ -222,7 +222,7 @@ let zippedPub = Publishers.Zip3(zipPublisher11, zipPublisher22, zipPublisher33)
 
 let cancellable = zippedPub.sink { values in
     print("\(values.0) \(values.1) \(values.2)")
-}*/
+}
 
 
 // switchToLatest
@@ -242,4 +242,96 @@ innerPublisher1.send(10)
 outerPublisher.send(AnyPublisher(innerPublisher2))
 innerPublisher2.send(20)
 
-innerPublisher2.send(100)
+innerPublisher2.send(100)*/
+
+
+//============================Error handling operators (catch, replaceError, retry etc.)=========================
+enum SampleError: Error {
+    case operationFailed
+}
+
+/*let numbersPublishers = [1,2,3,4,5,6,7,8].publisher
+
+let transformPublisher = numbersPublishers.tryMap { value in
+    if value == 3 {
+        throw SampleError.operationFailed
+    }
+    
+    return value
+}.catch { error in
+    print(error)
+    return Just(0)
+}
+
+transformPublisher.sink { value in
+    print(value)
+}*/
+
+
+// replaceError with single value
+/*let numberPublisher = [1,2,3,4,5,6,7,8].publisher
+
+let transformedPublisher = numberPublisher.tryMap { value in
+    if value == 3 {
+        throw SampleError.operationFailed
+    }
+    
+    return value
+}.replaceError(with: -1)
+
+// subscribe the publisher
+let cancellable = transformedPublisher.sink { value in
+    print(value)
+}
+
+// replaceError with another publisher
+let numberPublisher111 = [1,2,3,4,5,6,7,8].publisher
+let fallbackPublisher = Just(-1)
+
+let transformedPub = numberPublisher111.tryMap { value in
+    if value == 3 {
+        throw SampleError.operationFailed
+    }
+    
+    return Just(value)
+}.replaceError(with: fallbackPublisher)
+
+let cancellables = transformedPub.sink { publisher in
+    let _ = publisher.sink { value in
+        print(value)
+    }
+}*/
+
+// retry publisher
+let publisher = PassthroughSubject<Int, Error>()
+
+let retriedPublisher = publisher.tryMap { value in
+    if value == 3 || value == 6 || value == 9 {
+        throw SampleError.operationFailed
+    }
+    
+    return value
+}.retry(2) // 2 means we want to retry 2 times to attach to the Publisher.
+
+let cancellable = retriedPublisher.sink { completion in
+    switch completion {
+    case .finished:
+        print("Publisher has completed.")
+    case .failure(let error):
+        print("Publisher has failed with: \(error)")
+    }
+} receiveValue: { value in
+    print(value)
+}
+
+publisher.send(1)
+publisher.send(2)
+publisher.send(3)  // failed
+publisher.send(4)
+publisher.send(5)
+publisher.send(6)  // failed
+publisher.send(7)
+publisher.send(8)
+publisher.send(9)  // failed
+publisher.send(10)
+publisher.send(11)
