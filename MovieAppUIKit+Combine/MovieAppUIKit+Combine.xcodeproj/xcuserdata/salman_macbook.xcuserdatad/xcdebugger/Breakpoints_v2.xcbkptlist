@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C1FED416-2289-4735-B03A-3C59936AB15B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8B4A021-D955-47F6-9FF8-6CF6C1C33BB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Controllers/MovieViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D67DFCC5-6F81-41B4-9372-B80B431C7677"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Controllers/MovieViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D48A791B-AA30-4623-8180-93DF17B09F21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Controllers/MovieViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "searchBar(_:textDidChange:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53401143-4F13-4DA2-93E8-C608A6928890"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Models/MovieListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "setSearchText(searchString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BB05CE0-1D38-41C3-B073-75EB710DDC5A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Models/MovieListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "setupSearchPublisher()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2BB05CE0-1D38-41C3-B073-75EB710DDC5A - dc7db29c072bec60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieAppUIKit_Combine.MovieListViewModel.loadMovies(searchString: Swift.String) -&gt; ()"
+                  moduleName = "MovieAppUIKit+Combine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI/SwiftUI_Content/MovieAppUIKit+Combine/MovieAppUIKit+Combine/View%20Models/MovieListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "2BB05CE0-1D38-41C3-B073-75EB710DDC5A - df342c42e8c1d2d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in MovieAppUIKit_Combine.MovieListViewModel.loadMovies(searchString: Swift.String) -&gt; ()"
+                  moduleName = "MovieAppUIKit+Combine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI/SwiftUI_Content/MovieAppUIKit+Combine/MovieAppUIKit+Combine/View%20Models/MovieListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "2BB05CE0-1D38-41C3-B073-75EB710DDC5A - 5dc793e856a1cf54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;MovieAppUIKit_Combine.Movie&gt;) -&gt; () in MovieAppUIKit_Combine.MovieListViewModel.loadMovies(searchString: Swift.String) -&gt; ()"
+                  moduleName = "MovieAppUIKit+Combine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI/SwiftUI_Content/MovieAppUIKit+Combine/MovieAppUIKit+Combine/View%20Models/MovieListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "2BB05CE0-1D38-41C3-B073-75EB710DDC5A - 781f73bf08707e48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in MovieAppUIKit_Combine.MovieListViewModel.setupSearchPublisher() -&gt; ()"
+                  moduleName = "MovieAppUIKit+Combine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salman_macbook/Desktop/SwiftUI/SwiftUI_Content/MovieAppUIKit+Combine/MovieAppUIKit+Combine/View%20Models/MovieListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A294EC9A-2357-4568-9C6D-02BC0B12916F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Models/MovieListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "loadMovies(searchString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33DE1F4D-2325-4D79-B9EA-ACEE2FB1339A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Controllers/MovieViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB254367-FDD0-461A-A2CA-FAB263197797"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieAppUIKit+Combine/View Controllers/MovieViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
