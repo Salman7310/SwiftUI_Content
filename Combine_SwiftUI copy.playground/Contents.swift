@@ -300,7 +300,7 @@ let cancellables = transformedPub.sink { publisher in
     let _ = publisher.sink { value in
         print(value)
     }
-}*/
+}
 
 // retry publisher
 let publisher = PassthroughSubject<Int, Error>()
@@ -334,4 +334,104 @@ publisher.send(7)
 publisher.send(8)
 publisher.send(9)  // failed
 publisher.send(10)
-publisher.send(11)
+publisher.send(11)*/
+
+
+//===================Understanding Subjects in Combine (PassthroughSubject and CurrentValueSubject)=======
+
+// Subjects - publish and they can also subsribe.
+
+// PassthroughSubject
+
+/*let subject = PassthroughSubject<Int, Never>()
+
+// Subscribe the subject
+let cancellable = subject.sink { value in
+    print(value)
+}
+
+// Publish the subject
+subject.send(1)
+subject.send(2)
+
+
+// CurrentValueSubject
+let currentValueSubject = CurrentValueSubject<String, Never>("John")
+
+let cancellable = currentValueSubject.sink { value in
+    print(value)
+}
+
+currentValueSubject.send("Hello")
+
+/* currentValueSubject holds the last value but PassthroughSubject not*/
+print(currentValueSubject.value)*/
+
+
+//======================Creating custom subjects that takes only Even value ===================================
+/*class EvenSubject<Failure: Error>: Subject {
+    
+    typealias Output = Int
+    
+    private let wrapped: PassthroughSubject<Int, Failure>
+    
+    init(initialValue: Int) {
+        self.wrapped = PassthroughSubject()
+        let evenInitialValue = initialValue % 2 == 0 ? initialValue : 0
+        wrapped.send(evenInitialValue)
+    }
+    
+    func send(subscription: Subscription) {
+        wrapped.send(subscription: subscription)
+    }
+    
+    func send(_ value: Int) {
+        if value % 2 == 0 {
+            wrapped.send(value)
+        }
+    }
+    
+    func send(completion: Subscribers.Completion<Failure>) {
+        wrapped.send(completion: completion)
+    }
+    
+    func receive<S>(subscriber: S) where S : Subscriber, Failure == S.Failure, Int == S.Input {
+        wrapped.receive(subscriber: subscriber)
+    }
+    
+}
+
+let subject = EvenSubject<Never>(initialValue: 2)
+
+let cancellable = subject.sink { value in
+    print(value)
+}
+
+subject.send(4)
+subject.send(8)
+subject.send(13)*/
+
+
+// # Weather client using subjects :-
+/*Here we see how PassthroughSubject works in the real world.*/
+
+class WeatherClient {
+    
+    let updates = PassthroughSubject<Int, Never>()
+    
+    func fetchWeatehr() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            // Publish the subject
+            self?.updates.send(Int.random(in: (32...100))) // Here we can also call the api
+        }
+    }
+}
+
+let client = WeatherClient()
+
+// Subscribe the subject
+let cancellable = client.updates.sink { value in
+    print(value)
+}
+
+client.fetchWeatehr()
