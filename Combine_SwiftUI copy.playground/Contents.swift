@@ -496,5 +496,38 @@ fetchPosts() // It retruns a publisher, that's why we need to subscribe it.
 
 // Combining multiple network requests using CombineLatest(_, _) subject
 
+/*Api to get the data of superheroes like Batman and Spiderman etc:-
 
+https://www.omdbapi.com/?s=Batman&page=2&apiKey=564727fa*/
+
+struct MovieResponse: Decodable {
+    let search: [Movie]
+}
+
+struct Movie: Decodable {
+    let title: String
+}
+
+
+func fetchMovie(_ searchTerm: String) -> AnyPublisher<MovieResponse, Error> {
+    
+    let url = URL(string: "https://www.omdbapi.com/?s=\(searchTerm)&page=2&apiKey=564727fa")!
+    
+    return URLSession.shared.dataTaskPublisher(for: url)
+        .map(\.data)
+        .decode(type: MovieResponse.self, decoder: JSONDecoder())
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+}
+
+var cancellable: Set<AnyCancellable> = []
+
+// Combining multiple network requests
+Publishers.CombineLatest(fetchMovie("Batman"), fetchMovie("Spiderman"))
+    .sink { _ in
+        
+    } receiveValue: { value1, value2 in
+        print(value1.search)
+        print(value2.search)
+    }.store(in: &cancellable)
 
