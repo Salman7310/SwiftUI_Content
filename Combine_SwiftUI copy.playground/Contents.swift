@@ -415,7 +415,7 @@ subject.send(13)*/
 // # Weather client using subjects :-
 /*Here we see how PassthroughSubject works in the real world.*/
 
-class WeatherClient {
+/*class WeatherClient {
     
     let updates = PassthroughSubject<Int, Never>()
     
@@ -434,4 +434,67 @@ let cancellable = client.updates.sink { value in
     print(value)
 }
 
-client.fetchWeatehr()
+client.fetchWeatehr()*/
+
+
+//==========================Making network requests with Combine.===========================
+
+//https://jsonplaceholder.typicode.com/posts
+
+/*[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },*/
+
+/*struct Post: Codable {
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
+}
+
+enum NetworkError: Error {
+    case badServerResponse
+}
+ 
+func fetchPosts() -> AnyPublisher<[Post], Error> { //AnyPublisher is generic publisher
+    
+    let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+    
+    return URLSession.shared.dataTaskPublisher(for: url)
+        .tryMap { data, response in
+            print("retries")
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                throw NetworkError.badServerResponse
+            }
+            
+            return data
+        }
+        .decode(type: [Post].self, decoder: JSONDecoder())
+        .retry(3)
+        .receive(on: DispatchQueue.main)  // Receiving the value on main thread to update UI
+        .eraseToAnyPublisher() // convert anyPublisher to a specific type
+}
+
+var cancellable: Set<AnyCancellable> = []
+
+fetchPosts() // It retruns a publisher, that's why we need to subscribe it.
+    .sink { completion in
+        switch completion {
+        case .finished:
+            print("Update UI")
+        case .failure(let error):
+            print(error)
+        }
+    } receiveValue: { posts in
+        print(posts)
+    }.store(in: &cancellable)*/
+
+
+// Combining multiple network requests using CombineLatest(_, _) subject
+
+
+
