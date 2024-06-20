@@ -500,7 +500,7 @@ fetchPosts() // It retruns a publisher, that's why we need to subscribe it.
 
 https://www.omdbapi.com/?s=Batman&page=2&apiKey=564727fa*/
 
-struct MovieResponse: Decodable {
+/*struct MovieResponse: Decodable {
     let search: [Movie]
 }
 
@@ -531,3 +531,105 @@ Publishers.CombineLatest(fetchMovie("Batman"), fetchMovie("Spiderman"))
         print(value2.search)
     }.store(in: &cancellable)
 
+*/
+
+
+//=============== Combine Framework - Custom operators, debugging and testing combine code ====================
+
+/*/* Creating a custom operator that can return even number */
+/* Creating a custom operator that takes a parameter and can return greaterThan number*/
+
+extension Publisher where Output == Int {
+    
+    func filterEvenNumbers() -> AnyPublisher<Int, Failure> {
+        return self.filter { $0 % 2 == 0 }
+            .eraseToAnyPublisher()
+    }
+    
+    func filterGreaterthanNumber(_ value: Int) -> AnyPublisher<Int, Failure> {
+        return self.filter { $0 > value }
+            .eraseToAnyPublisher()
+    }
+}
+
+let publisher = [1,2,3,4,5,6,7,8,9,10].publisher
+
+print("filterEvenNumbers")
+let cancellable = publisher.filterEvenNumbers()
+    .sink { value in
+        print(value)
+    }
+
+print("filterGreaterthanNumber")
+let _ = publisher.filterGreaterthanNumber(3)
+    .sink { value in
+        print(value)
+    }
+*/
+
+
+/* Combining two operators */
+/*extension Publisher {
+    
+    func mapAndFilter<T>(_ transform: @escaping (Output) -> T, _ isIncluded: @escaping (T) -> Bool) -> AnyPublisher<T, Failure> {
+        return self
+            .map { transform($0) }
+            .filter { isIncluded($0) }
+            .eraseToAnyPublisher()
+    }
+    
+}
+
+let publisher = [1,2,3,4,5,6,7,8,9,10].publisher
+
+let _ = publisher
+    .mapAndFilter({ $0 * 2 }) { value in
+    return value % 2 == 0
+    }.sink { value in
+        print(value)
+    }
+*/
+
+
+/*  Debugging Combine code */
+/* Here we see what is really happening in Combining two operators in pipeline */
+
+// Way 1 to debug combine is :- .print("Debug")
+// Way 2 to debug combine is :- .breakpoint(receiveOutput: ) --> See code of MovieApp in SwiftUI code
+// Way 3 to debug combine is :- using handle events
+
+
+// Way 1 to debug combine is :- .print("Debug")
+/*let publisher = [1,2,3,4,5,6,7,8].publisher
+
+let cancellable = publisher
+    .map { $0 * 3 }
+    .filter { $0 % 2 == 0 }
+    .print("Debug")
+    .sink { value in
+        print(value)
+    }*/
+
+
+// Way 3 to debug combine is :- using handle events
+let publisher = [1,2,3,4,5,6,7,8,9,10].publisher
+
+publisher
+    .handleEvents { _ in
+        print("Subscription received")
+    } receiveOutput: { value in
+        print("receiveOutput")
+        print(value)
+    } receiveCompletion: { completion in
+        print("receiveCompletion")
+    } receiveCancel: {
+        print("receiveCancel")
+    } receiveRequest: { _ in
+        print("receiveRequest")
+    }
+    .map { $0 * 3 }
+    //.filter { $0 % 2 == 0 }
+    .sink { value in
+        print("sink")
+        print(value)
+    }
