@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  BudgetApp+CoreData+SwiftUI
+//  BudgetApp_CoreData
 //
-//  Created by Salman_Macbook on 21/06/24.
+//  Created by Salman_Macbook on 24/06/24.
 //
 
 import SwiftUI
