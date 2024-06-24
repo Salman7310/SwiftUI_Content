@@ -14,6 +14,7 @@ struct AddBudgetCategoryView: View {
     @State private var messages: [String] = []
     
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.dismiss) private var dismiss
     
     var isFormValid: Bool {
         
@@ -39,6 +40,7 @@ struct AddBudgetCategoryView: View {
         // save the context
         do {
             try viewContext.save()
+            dismiss()
         } catch {
             print(error.localizedDescription)
         }
@@ -62,12 +64,13 @@ struct AddBudgetCategoryView: View {
                 
                 ForEach(messages, id: \.self) { message in
                     Text(message)
+                        .foregroundColor(.red)
                 }
                 
             }.toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
-                        
+                        dismiss()
                     }
                 }
                 

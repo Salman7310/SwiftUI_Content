@@ -20,6 +20,18 @@ struct ContentView: View {
         }
     }
     
+    private func deleteBudgetCategory(budgetCategory: BudgetCategory) {
+        // Perform delete for selected element
+        viewContext.delete(budgetCategory)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            print(error)
+        }
+        
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -28,15 +40,7 @@ struct ContentView: View {
                     .foregroundColor(.green)
                 
                 BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: { budgetCategory in
-                    
-                    // Perform Delete for selected element
-                    viewContext.delete(budgetCategory)
-                    
-                    do {
-                        try viewContext.save()
-                    } catch {
-                        print(error)
-                    }
+                    deleteBudgetCategory(budgetCategory: budgetCategory)
                 })
             }
             .sheet(isPresented: $isPresented, content: {
