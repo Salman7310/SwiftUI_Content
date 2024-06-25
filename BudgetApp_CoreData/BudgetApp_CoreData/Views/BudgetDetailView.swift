@@ -30,6 +30,20 @@ struct BudgetDetailView: View {
             // Creating relationship
             budgetCategory.addToTransaction(transaction)
             try viewContext.save()
+            
+            // clear the TestField
+            title = ""
+            total = ""
+        } catch {
+            print(error)
+        }
+    }
+    
+    private func deleteTransaction(_ transaction: Transaction) {
+        viewContext.delete(transaction)
+        
+        do {
+            try viewContext.save()
         } catch {
             print(error)
         }
@@ -58,7 +72,9 @@ struct BudgetDetailView: View {
                     Button("Save Transaction") {
                         // save transaction
                         saveTransaction()
-                    }.disabled(!isFormValid)
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(!isFormValid)
                     Spacer()
                 }
             }
@@ -67,7 +83,7 @@ struct BudgetDetailView: View {
             BudgetSummaryView(budgetCategory: budgetCategory)
             
             // Display the transaction
-            TransactionListView(request: BudgetCategory.transactionByCategoryRequest(budgetCategory))
+            TransactionListView(request: BudgetCategory.transactionByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
             
             Spacer()
         }

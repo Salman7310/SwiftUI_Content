@@ -11,9 +11,12 @@ import CoreData
 struct TransactionListView: View {
     
     @FetchRequest var transactions: FetchedResults<Transaction>
+    // Closure to pass value to ParentView when deleting a transaction
+    let onDeleteTransaction: (Transaction) -> Void
     
-    init(request: NSFetchRequest<Transaction>) {
+    init(request: NSFetchRequest<Transaction>, onDeleteTransaction: @escaping (Transaction) -> Void) { // escaping for future use
         _transactions = FetchRequest(fetchRequest: request)
+        self.onDeleteTransaction = onDeleteTransaction
     }
     
     var body: some View {
@@ -27,6 +30,8 @@ struct TransactionListView: View {
                         Spacer()
                         Text(transaction.total as NSNumber, formatter: NumberFormatter.currency)
                     }
+                }.onDelete { indexSet in
+                    indexSet.map { transactions[$0] }.forEach(onDeleteTransaction)
                 }
             }
         }
