@@ -12,7 +12,7 @@ struct AddBudgetCategoryView: View {
     @State private var title: String = ""
     @State private var total: Double = 100
     @State private var messages: [String] = []
-    
+
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) private var dismiss
     
