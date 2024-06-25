@@ -14,21 +14,33 @@ struct BudgetListView: View {
     let onDeleteBudgetCategory: (BudgetCategory) -> Void  //Closure
     
     var body: some View {
-        List {
-            if !budgetCategoryResults.isEmpty {
-                ForEach(budgetCategoryResults) { budgetCategory in
-                    HStack {
-                        Text(budgetCategory.title ?? "")
-                        Spacer()
-                        VStack {
-                            Text(budgetCategory.total as NSNumber, formatter: NumberFormatter.currency)
+        NavigationStack {
+            List {
+                if !budgetCategoryResults.isEmpty {
+                    ForEach(budgetCategoryResults) { budgetCategory in
+                        NavigationLink(value: budgetCategory) {
+                            HStack {
+                                Text(budgetCategory.title ?? "")
+                                Spacer()
+                                VStack(alignment: .trailing, spacing: 10) {
+                                    Text(budgetCategory.total as NSNumber, formatter: NumberFormatter.currency)
+                                    Text("\(budgetCategory.overSpent ? "Overspent" : "Remaining") \(Text(budgetCategory.remainingBudgetTotal as NSNumber, formatter: NumberFormatter.currency))")
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(budgetCategory.overSpent ? .red : .green)
+                                }
+                            }
                         }
-                    }
-                }.onDelete(perform: { indexSet in
-                    indexSet.map { budgetCategoryResults[$0] }.forEach(onDeleteBudgetCategory)
-                })
-            } else {
-                Text("No budget categories exists.")
+                    }.onDelete(perform: { indexSet in
+                        indexSet.map { budgetCategoryResults[$0] }.forEach(onDeleteBudgetCategory)
+                    })
+                } else {
+                    Text("No budget categories exists.")
+                }
+            }
+            .listStyle(.automatic)
+            .navigationDestination(for: BudgetCategory.self) { budgetCategory in
+                BudgetDetailView(budgetCategory: budgetCategory)
             }
         }
     }
