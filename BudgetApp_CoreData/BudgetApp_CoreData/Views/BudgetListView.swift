@@ -12,6 +12,7 @@ struct BudgetListView: View {
     
     let budgetCategoryResults: FetchedResults<BudgetCategory>
     let onDeleteBudgetCategory: (BudgetCategory) -> Void  //Closure
+    let onEditBudgetCategory: (BudgetCategory) -> Void //Closure
     
     var body: some View {
         NavigationStack {
@@ -29,7 +30,10 @@ struct BudgetListView: View {
                                         .fontWeight(.bold)
                                         .foregroundColor(budgetCategory.overSpent ? .red : .green)
                                 }
-                            }
+                            }.contentShape(Rectangle())
+                                .onLongPressGesture {
+                                    onEditBudgetCategory(budgetCategory)
+                                }
                         }
                     }.onDelete(perform: { indexSet in
                         indexSet.map { budgetCategoryResults[$0] }.forEach(onDeleteBudgetCategory)

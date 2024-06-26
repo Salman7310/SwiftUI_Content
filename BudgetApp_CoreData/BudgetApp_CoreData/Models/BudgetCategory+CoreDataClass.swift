@@ -15,6 +15,11 @@ public class BudgetCategory: NSManagedObject {
         self.dateCreated = Date()
     }
     
+    static var all: NSFetchRequest<BudgetCategory> {
+        let request = BudgetCategory.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "dateCreated", ascending: false)]
+        return request
+    }
     
     private var transactionsArray: [Transaction] {
         guard let transaction = transaction else { return [] }
@@ -43,6 +48,14 @@ public class BudgetCategory: NSManagedObject {
         request.sortDescriptors = [NSSortDescriptor(key: "dateCreated", ascending: false)]
         request.predicate = NSPredicate(format: "category = %@", budgetCategory)
         return request
+    }
+    
+    static func byId(_ id: NSManagedObjectID) -> BudgetCategory {
+        let viewContext = CoreDataManager.shared.viewContext
+        guard let budgetCategory = viewContext.object(with: id) as? BudgetCategory else {
+            fatalError("Id not found")
+        }
+        return budgetCategory
     }
     
 }

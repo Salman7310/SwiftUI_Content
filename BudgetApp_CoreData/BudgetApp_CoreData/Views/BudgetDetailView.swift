@@ -31,7 +31,7 @@ struct BudgetDetailView: View {
             budgetCategory.addToTransaction(transaction)
             try viewContext.save()
             
-            // clear the TestField
+            // clear the TextField
             title = ""
             total = ""
         } catch {
@@ -78,12 +78,16 @@ struct BudgetDetailView: View {
                     Spacer()
                 }
             }
+            .frame(maxHeight: .infinity)
+            .padding([.bottom], 20)
             
-            // Display summary of the budget category
-            BudgetSummaryView(budgetCategory: budgetCategory)
-            
-            // Display the transaction
-            TransactionListView(request: BudgetCategory.transactionByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
+            VStack {
+                // Display summary of the budget category
+                BudgetSummaryView(budgetCategory: budgetCategory)
+                
+                // Display the transaction
+                TransactionListView(request: BudgetCategory.transactionByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
+            }
             
             Spacer()
         }

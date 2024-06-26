@@ -16,6 +16,12 @@ struct AddBudgetCategoryView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) private var dismiss
     
+    private var budgetCategory: BudgetCategory?
+    
+    init(budgetCategory: BudgetCategory? = nil) {
+        self.budgetCategory = budgetCategory
+    }
+    
     var isFormValid: Bool {
         
         messages.removeAll()
@@ -31,7 +37,7 @@ struct AddBudgetCategoryView: View {
         return messages.count == 0
     }
     
-    private func save() {
+    /*private func save() {
         
         let budgetCategory = BudgetCategory(context: viewContext)
         budgetCategory.title = title
@@ -45,6 +51,28 @@ struct AddBudgetCategoryView: View {
             print(error.localizedDescription)
         }
         
+    }*/
+    
+    private func saveOrUpdate() {
+        if let budgetCategory {
+            // update the existing budget category
+            let budgetCategory = BudgetCategory.byId(budgetCategory.objectID)
+            budgetCategory.title = title
+            budgetCategory.total = total
+        } else {
+            // Save new budget category
+            let budgetCategory = BudgetCategory(context: viewContext)
+            budgetCategory.title = title
+            budgetCategory.total = total
+        }
+        
+        // save the context
+        do {
+            try viewContext.save()
+            dismiss()
+        } catch {
+            print(error)
+        }
     }
     
     var body: some View {
@@ -67,7 +95,14 @@ struct AddBudgetCategoryView: View {
                         .foregroundColor(.red)
                 }
                 
-            }.toolbar {
+            }
+            .onAppear() {
+                if let budgetCategory {
+                    title = budgetCategory.title ?? ""
+                    total = budgetCategory.total
+                }
+            }
+            .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
                         dismiss()
@@ -77,7 +112,7 @@ struct AddBudgetCategoryView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         if isFormValid {
-                            save()
+                            saveOrUpdate()
                         }
                     }
                 }
