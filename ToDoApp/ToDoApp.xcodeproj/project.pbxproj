@@ -13,6 +13,7 @@
 		326A9A3F2C3689150046D976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326A9A3E2C3689150046D976 /* Preview Assets.xcassets */; };
 		326A9A472C368B620046D976 /* TodoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 326A9A452C368B620046D976 /* TodoModel.xcdatamodeld */; };
 		326A9A4A2C36909F0046D976 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A9A492C36909F0046D976 /* CoreDataProvider.swift */; };
+		326A9A4D2C36C0440046D976 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A9A4C2C36C0440046D976 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		326A9A3E2C3689150046D976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		326A9A462C368B620046D976 /* TodoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoModel.xcdatamodel; sourceTree = "<group>"; };
 		326A9A492C36909F0046D976 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		326A9A4C2C36C0440046D976 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		326A9A362C3689140046D976 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				326A9A4B2C36C02D0046D976 /* Extensions */,
 				326A9A482C3690850046D976 /* Providers */,
 				326A9A372C3689140046D976 /* ToDoAppApp.swift */,
 				326A9A392C3689140046D976 /* ContentView.swift */,
@@ -79,6 +82,14 @@
 				326A9A492C36909F0046D976 /* CoreDataProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		326A9A4B2C36C02D0046D976 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				326A9A4C2C36C0440046D976 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326A9A4D2C36C0440046D976 /* String+Extensions.swift in Sources */,
 				326A9A3A2C3689140046D976 /* ContentView.swift in Sources */,
 				326A9A472C368B620046D976 /* TodoModel.xcdatamodeld in Sources */,
 				326A9A382C3689140046D976 /* ToDoAppApp.swift in Sources */,
