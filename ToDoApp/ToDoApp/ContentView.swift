@@ -36,6 +36,16 @@ struct ContentView: View {
         }
     }
     
+    private func deleteTodoItem(_ todoItem: TodoItem) {
+        context.delete(todoItem)
+        
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
+    }
+    
     private var pendingTodoItems: [TodoItem] {
         todoItems.filter { !$0.isCompleted }
     }
@@ -57,14 +67,32 @@ struct ContentView: View {
             
             List {
                 Section("Pending") {
-                    ForEach(pendingTodoItems) { todoItem in
-                        TodoCellView(todoItem: todoItem, onChanged: updateTodoItem)
+                    if pendingTodoItems.isEmpty {
+                        ContentUnavailableView("No Items Found.", systemImage: "doc")
+                    } else {
+                        ForEach(pendingTodoItems) { todoItem in
+                            TodoCellView(todoItem: todoItem, onChanged: updateTodoItem)
+                        }.onDelete(perform: { indexSet in
+                            indexSet.forEach { index in
+                                let todoItem = pendingTodoItems[index]
+                                deleteTodoItem(todoItem)
+                            }
+                        })
                     }
                 }
                 
                 Section("Completed") {
-                    ForEach(completedTodoItem) { todoItem in
-                        TodoCellView(todoItem: todoItem, onChanged: updateTodoItem)
+                    if completedTodoItem.isEmpty {
+                        ContentUnavailableView("No Items Found.", systemImage: "doc")
+                    } else {
+                        ForEach(completedTodoItem) { todoItem in
+                            TodoCellView(todoItem: todoItem, onChanged: updateTodoItem)
+                        }.onDelete(perform: { indexSet in
+                            indexSet.forEach { index in
+                                let todoItem = completedTodoItem[index]
+                                deleteTodoItem(todoItem)
+                            }
+                        })
                     }
                 }
             }
@@ -88,7 +116,17 @@ struct TodoCellView: View {
                     todoItem.isCompleted = !todoItem.isCompleted
                     onChanged(todoItem)
                 }
-            Text(todoItem.title ?? "")
+            if todoItem.isCompleted {
+                Text(todoItem.title ?? "")
+            } else {
+                TextField("", text: Binding(get: {
+                    todoItem.title ?? ""
+                }, set: { newValue in
+                    todoItem.title = newValue
+                })).onSubmit {
+                    onChanged(todoItem)
+                }
+            }
         }
     }
 }
