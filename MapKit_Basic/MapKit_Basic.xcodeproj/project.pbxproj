@@ -11,6 +11,9 @@
 		320716032C47AF0900553977 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716022C47AF0900553977 /* ContentView.swift */; };
 		320716052C47AF0B00553977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320716042C47AF0B00553977 /* Assets.xcassets */; };
 		320716082C47AF0B00553977 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320716072C47AF0B00553977 /* Preview Assets.xcassets */; };
+		320716102C48FB2C00553977 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3207160F2C48FB2C00553977 /* LocationManager.swift */; };
+		320716132C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716122C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift */; };
+		320716172C48FBE500553977 /* MapOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716162C48FBE500553977 /* MapOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		320716022C47AF0900553977 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		320716042C47AF0B00553977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		320716072C47AF0B00553977 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3207160F2C48FB2C00553977 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		320716122C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
+		320716162C48FBE500553977 /* MapOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 		320715FF2C47AF0900553977 /* MapKit_Basic */ = {
 			isa = PBXGroup;
 			children = (
+				320716142C48FBC000553977 /* Models */,
+				320716112C48FB5700553977 /* Extensions */,
+				3207160E2C48FB1C00553977 /* Managers */,
 				320716002C47AF0900553977 /* MapKit_BasicApp.swift */,
 				320716022C47AF0900553977 /* ContentView.swift */,
 				320716042C47AF0B00553977 /* Assets.xcassets */,
@@ -65,6 +74,38 @@
 				320716072C47AF0B00553977 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3207160E2C48FB1C00553977 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3207160F2C48FB2C00553977 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		320716112C48FB5700553977 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				320716122C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		320716142C48FBC000553977 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				320716152C48FBC500553977 /* MapOptions */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		320716152C48FBC500553977 /* MapOptions */ = {
+			isa = PBXGroup;
+			children = (
+				320716162C48FBE500553977 /* MapOptions.swift */,
+			);
+			path = MapOptions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +180,9 @@
 			files = (
 				320716032C47AF0900553977 /* ContentView.swift in Sources */,
 				320716012C47AF0900553977 /* MapKit_BasicApp.swift in Sources */,
+				320716172C48FBE500553977 /* MapOptions.swift in Sources */,
+				320716102C48FB2C00553977 /* LocationManager.swift in Sources */,
+				320716132C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +318,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MapKit_Basic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "NearBy App requires permissions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +347,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MapKit_Basic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "NearBy App requires permissions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
