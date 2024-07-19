@@ -11,14 +11,22 @@ import MapKit
 
 struct ContentView: View {
     
+    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
     @State private var selectedMapOption: MapOptions = .standard
-    private var locationManager = LocationManager.shared
+    @State private var locationManager = LocationManager.shared
+    
+    private func openSettings() {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+    }
     
     var body: some View {
         ZStack(alignment: .top) {
-            Map {
+            Map(position: $position) {
                 /*Marker("Coffee", coordinate: .coffee)
-                Marker("Restaurant", coordinate: .restaurant)*/
+                 Marker("Restaurant", coordinate: .restaurant)*/
                 Annotation("Coffee", coordinate: .coffee) {
                     Image(systemName: "cup.and.saucer.fill")
                         .padding(4)
@@ -37,15 +45,57 @@ struct ContentView: View {
                 
                 UserAnnotation()
                 
-            }.mapStyle(selectedMapOption.mapStyle)
-            
-            Picker("Map Styles", selection: $selectedMapOption) {
-                ForEach(MapOptions.allCases) { mapOption in
-                    Text(mapOption.rawValue.capitalized).tag(mapOption)
+            }
+            .mapControls({
+                MapUserLocationButton()
+                MapCompass()
+                MapScaleView()
+            })
+            .onChange(of: locationManager.region) {
+                withAnimation {
+                    position = .region(locationManager.region)
                 }
-            }.pickerStyle(.segmented)
-                .background(.white)
-                .padding()
+            }
+            .mapStyle(selectedMapOption.mapStyle)
+            
+            .alert(isPresented: $locationManager.showingLocationAlert) {
+                Alert(
+                    title: Text("Location Access"),
+                    message: Text("Please enable location access in Settings to use this feature."),
+                    primaryButton: .default(Text("Settings"), action: {
+                        openSettings()
+                    }),
+                    secondaryButton: .cancel()
+                )
+            }
+            
+            VStack {
+                Spacer()
+                
+                Picker("Map Styles", selection: $selectedMapOption) {
+                    ForEach(MapOptions.allCases) { mapOption in
+                        Text(mapOption.rawValue.capitalized).tag(mapOption)
+                    }
+                }.pickerStyle(.segmented)
+                    .background(.white)
+                    .padding()
+                
+                HStack {
+                    Button("Coffee") {
+                        withAnimation {
+                            position = .region(.coffee)
+                        }
+                    }.buttonStyle(.borderedProminent)
+                        .tint(.brown)
+                    
+                    Button("Restaurent") {
+                        withAnimation {
+                            position = .region(.restaurant)
+                        }
+                    }.buttonStyle(.borderedProminent)
+                        .tint(.orange)
+                }
+            }
         }
     }
 }

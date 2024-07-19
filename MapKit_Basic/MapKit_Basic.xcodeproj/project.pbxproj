@@ -14,6 +14,7 @@
 		320716102C48FB2C00553977 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3207160F2C48FB2C00553977 /* LocationManager.swift */; };
 		320716132C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716122C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift */; };
 		320716172C48FBE500553977 /* MapOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716162C48FBE500553977 /* MapOptions.swift */; };
+		320716192C49199300553977 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716182C49199300553977 /* MKCoordinateRegion+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3207160F2C48FB2C00553977 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		320716122C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
 		320716162C48FBE500553977 /* MapOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOptions.swift; sourceTree = "<group>"; };
+		320716182C49199300553977 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				320716122C48FB6800553977 /* CLLocationCoordinate2D+Extensions.swift */,
+				320716182C49199300553977 /* MKCoordinateRegion+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				320716032C47AF0900553977 /* ContentView.swift in Sources */,
+				320716192C49199300553977 /* MKCoordinateRegion+Extensions.swift in Sources */,
 				320716012C47AF0900553977 /* MapKit_BasicApp.swift in Sources */,
 				320716172C48FBE500553977 /* MapOptions.swift in Sources */,
 				320716102C48FB2C00553977 /* LocationManager.swift in Sources */,
