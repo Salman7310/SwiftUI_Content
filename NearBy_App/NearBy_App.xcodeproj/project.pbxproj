@@ -11,6 +11,7 @@
 		320716292C4A68B900553977 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716282C4A68B900553977 /* ContentView.swift */; };
 		3207162B2C4A68BB00553977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3207162A2C4A68BB00553977 /* Assets.xcassets */; };
 		3207162E2C4A68BB00553977 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3207162D2C4A68BB00553977 /* Preview Assets.xcassets */; };
+		325FB98B2C4E300D001700CB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325FB98A2C4E300D001700CB /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		320716282C4A68B900553977 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3207162A2C4A68BB00553977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3207162D2C4A68BB00553977 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		325FB98A2C4E300D001700CB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		320716252C4A68B900553977 /* NearBy_App */ = {
 			isa = PBXGroup;
 			children = (
+				325FB9892C4E2FFB001700CB /* Managers */,
 				320716262C4A68B900553977 /* NearBy_AppApp.swift */,
 				320716282C4A68B900553977 /* ContentView.swift */,
 				3207162A2C4A68BB00553977 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				3207162D2C4A68BB00553977 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		325FB9892C4E2FFB001700CB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				325FB98A2C4E300D001700CB /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				320716292C4A68B900553977 /* ContentView.swift in Sources */,
 				320716272C4A68B900553977 /* NearBy_AppApp.swift in Sources */,
+				325FB98B2C4E300D001700CB /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

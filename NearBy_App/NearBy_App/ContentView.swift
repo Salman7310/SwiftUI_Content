@@ -6,16 +6,33 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
+    
+    @State private var query: String = ""
+    @State private var selectedDetent: PresentationDetent = .fraction(0.15)
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Map()
+                .sheet(isPresented: .constant(true), content: {
+                    VStack {
+                        TextField("Search", text: $query)
+                            .textFieldStyle(.roundedBorder)
+                            .padding()
+                            .onSubmit {
+                                // code fired when you click return in TextField
+                            }
+                        
+                        Spacer()
+                    }
+                    .presentationDetents([.fraction(0.15), .medium, .large], selection: $selectedDetent)
+                    .presentationDragIndicator(.visible)
+                    .interactiveDismissDisabled()
+                    .presentationBackgroundInteraction(.enabled)
+                })
         }
-        .padding()
     }
 }
 
