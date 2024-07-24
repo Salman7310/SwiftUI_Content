@@ -55,6 +55,11 @@ struct ContentView: View {
                             isSearching = true
                         }
                     
+                    SearchOptionsView { searchTerm in
+                        query = searchTerm
+                        isSearching = true
+                    }
+                    
                     List(mapItems, id: \.self) { mapItem in
                         Text(mapItem.name ?? "")
                         
