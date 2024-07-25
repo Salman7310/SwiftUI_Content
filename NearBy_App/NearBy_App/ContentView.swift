@@ -8,6 +8,11 @@
 import SwiftUI
 import MapKit
 
+enum DisplayMode {
+    case list
+    case detail
+}
+
 struct ContentView: View {
     
     @State private var query: String = ""
@@ -17,6 +22,8 @@ struct ContentView: View {
     @State private var isSearching: Bool = false
     @State private var mapItems: [MKMapItem] = []
     @State private var visibleRegion: MKCoordinateRegion?
+    @State private var selectedMapItem: MKMapItem?
+    @State private var displayMode: DisplayMode = .list
     
     private func search() async {
         do {
@@ -33,7 +40,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Map(position: $position) {
+            Map(position: $position, selection: $selectedMapItem) {
                 
                 ForEach(mapItems, id: \.self) { mapItem in
                     Marker(item: mapItem)
@@ -47,33 +54,30 @@ struct ContentView: View {
             })
             .sheet(isPresented: .constant(true), content: {
                 VStack {
-                    TextField("Search", text: $query)
-                        .textFieldStyle(.roundedBorder)
-                        .padding()
-                        .onSubmit {
-                            // code fired when you click return in TextField
-                            isSearching = true
-                        }
-                    
-                    SearchOptionsView { searchTerm in
-                        query = searchTerm
-                        isSearching = true
-                    }
-                    
-                    List(mapItems, id: \.self) { mapItem in
-                        Text(mapItem.name ?? "")
-                        
-                        PlaceView(mapItem: mapItem)
+                    switch displayMode {
+                    case .list:
+                        SearchbarView(search: $query, isSearching: $isSearching)
+                        PlaceListView(mapItems: mapItems)
+                    case .detail:
+                        SelectedPlaceDetailView(mapItem: $selectedMapItem)
+                            .padding()
                     }
                     
                     Spacer()
                 }
-                .presentationDetents([.fraction(0.15), .medium, .large], selection: $selectedDetent)
+                .presentationDetents([.fraction(0.15), .medium, .large]) /*, selection: $selectedDetent)*/ // To remove the flickering in sheet while swiping to mid.
                 .presentationDragIndicator(.visible)
                 .interactiveDismissDisabled()
                 .presentationBackgroundInteraction(.enabled)
             })
         }
+        .onChange(of: selectedMapItem, {
+            if (selectedMapItem != nil) {
+                displayMode = .detail
+            } else {
+                displayMode = .list
+            }
+        })
         .onMapCameraChange { context in
             visibleRegion = context.region
         }

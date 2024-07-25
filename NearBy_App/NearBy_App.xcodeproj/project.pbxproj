@@ -11,12 +11,16 @@
 		320716292C4A68B900553977 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320716282C4A68B900553977 /* ContentView.swift */; };
 		3207162B2C4A68BB00553977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3207162A2C4A68BB00553977 /* Assets.xcassets */; };
 		3207162E2C4A68BB00553977 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3207162D2C4A68BB00553977 /* Preview Assets.xcassets */; };
+		323C80E72C51112F00FCECB0 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C80E62C51112F00FCECB0 /* SearchbarView.swift */; };
 		3252363D2C50CFE3003864B5 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252363C2C50CFE3003864B5 /* PlaceView.swift */; };
 		3252363F2C50D3CC003864B5 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252363E2C50D3CC003864B5 /* PreviewData.swift */; };
 		325236432C50FC2D003864B5 /* SearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325236422C50FC2D003864B5 /* SearchOptionsView.swift */; };
 		325FB98B2C4E300D001700CB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325FB98A2C4E300D001700CB /* LocationManager.swift */; };
 		325FB98E2C4E3CF1001700CB /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325FB98D2C4E3CF1001700CB /* MKCoordinateRegion+Extensions.swift */; };
 		32A327C22C4F7C7300009474 /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A327C12C4F7C7300009474 /* MapUtilities.swift */; };
+		32EFAF882C51136E0058F4AE /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EFAF872C51136E0058F4AE /* PlaceListView.swift */; };
+		32EFAF8A2C512C3D0058F4AE /* MeasurementFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EFAF892C512C3D0058F4AE /* MeasurementFormatter+Extensions.swift */; };
+		32EFAF8C2C52230F0058F4AE /* SelectedPlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EFAF8B2C52230F0058F4AE /* SelectedPlaceDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +29,16 @@
 		320716282C4A68B900553977 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3207162A2C4A68BB00553977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3207162D2C4A68BB00553977 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		323C80E62C51112F00FCECB0 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 		3252363C2C50CFE3003864B5 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		3252363E2C50D3CC003864B5 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		325236422C50FC2D003864B5 /* SearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOptionsView.swift; sourceTree = "<group>"; };
 		325FB98A2C4E300D001700CB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		325FB98D2C4E3CF1001700CB /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
 		32A327C12C4F7C7300009474 /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
+		32EFAF872C51136E0058F4AE /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		32EFAF892C512C3D0058F4AE /* MeasurementFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		32EFAF8B2C52230F0058F4AE /* SelectedPlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPlaceDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,9 @@
 			children = (
 				3252363C2C50CFE3003864B5 /* PlaceView.swift */,
 				325236422C50FC2D003864B5 /* SearchOptionsView.swift */,
+				323C80E62C51112F00FCECB0 /* SearchbarView.swift */,
+				32EFAF872C51136E0058F4AE /* PlaceListView.swift */,
+				32EFAF8B2C52230F0058F4AE /* SelectedPlaceDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				325FB98D2C4E3CF1001700CB /* MKCoordinateRegion+Extensions.swift */,
+				32EFAF892C512C3D0058F4AE /* MeasurementFormatter+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,12 +201,16 @@
 			files = (
 				3252363D2C50CFE3003864B5 /* PlaceView.swift in Sources */,
 				320716292C4A68B900553977 /* ContentView.swift in Sources */,
+				32EFAF882C51136E0058F4AE /* PlaceListView.swift in Sources */,
 				325FB98E2C4E3CF1001700CB /* MKCoordinateRegion+Extensions.swift in Sources */,
+				32EFAF8C2C52230F0058F4AE /* SelectedPlaceDetailView.swift in Sources */,
 				320716272C4A68B900553977 /* NearBy_AppApp.swift in Sources */,
 				3252363F2C50D3CC003864B5 /* PreviewData.swift in Sources */,
+				323C80E72C51112F00FCECB0 /* SearchbarView.swift in Sources */,
 				32A327C22C4F7C7300009474 /* MapUtilities.swift in Sources */,
 				325FB98B2C4E300D001700CB /* LocationManager.swift in Sources */,
 				325236432C50FC2D003864B5 /* SearchOptionsView.swift in Sources */,
+				32EFAF8A2C512C3D0058F4AE /* MeasurementFormatter+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
